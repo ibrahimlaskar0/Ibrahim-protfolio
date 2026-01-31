@@ -42,10 +42,10 @@ const Header = () => {
         y: isVisible ? 0 : -100,
         transition: { duration: 0.3, ease: "easeInOut" }
       }}
-      className={`fixed top-2 left-4 right-4 z-50 transition-all duration-300 rounded-2xl ${
+      className={`fixed top-3 left-4 right-4 z-50 transition-all duration-500 rounded-2xl ${
         isScrolled 
-          ? 'backdrop-blur-xl bg-black/20 border border-white/10' 
-          : 'backdrop-blur-sm bg-black/10 border border-white/5'
+          ? 'backdrop-blur-2xl bg-black/40 border border-white/15 shadow-lg shadow-purple-500/5' 
+          : 'backdrop-blur-xl bg-black/20 border border-white/10'
       }`}
     >
       <nav className="px-6 py-3">
@@ -58,7 +58,7 @@ const Header = () => {
             onClick={() => scrollToSection('hero')}
           >
             <div className="flex items-center space-x-2">
-              <span className="text-white font-dm-serif font-bold text-lg tracking-wide">Ibrahim Laskar</span>
+              <span className="text-white font-dm-serif font-bold text-lg tracking-wide">GenZ Media Town</span>
             </div>
           </motion.div>
 
@@ -69,7 +69,7 @@ const Header = () => {
               {[
                 { name: 'About', id: 'testimonials', type: 'scroll' },
                 { name: 'Projects', id: 'saas-projects', type: 'scroll' },
-                { name: 'Contact', id: 'https://calendly.com/neutromedia0/30min', type: 'link' }
+                { name: 'Contact', id: 'https://calendly.com/genzmediatown/30min', type: 'link' }
               ].map((item) => (
                 <button
                   key={item.name}

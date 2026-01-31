@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Mail, Linkedin, Calendar, Twitter } from 'lucide-react';
+import { Mail, Calendar, Instagram } from 'lucide-react';
 
 const GetInTouchSection = () => {
   const ref = useRef(null);
@@ -12,35 +12,28 @@ const GetInTouchSection = () => {
     {
       icon: Mail,
       label: 'Email',
-      href: 'https://mail.google.com/mail/?view=cm&fs=1&to=ibrahimlaskar546@gmail.com',
+      href: 'https://mail.google.com/mail/?view=cm&fs=1&to=genzmediatown@gmail.com',
       color: 'hover:text-blue-400',
-      description: 'ibrahimlaskar546@gmail.com'
-    },
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/ibrahim-laskar-ai/',
-      color: 'hover:text-blue-500',
-      description: 'Connect professionally'
+      description: 'genzmediatown@gmail.com'
     },
     {
       icon: Calendar,
       label: 'Schedule a Call',
-      href: 'https://calendly.com/ibrahimlaskar546/30min',
+      href: 'https://calendly.com/genzmediatown/30min',
       color: 'hover:text-green-500',
       description: 'Book a 1:1 meeting'
     },
     {
-      icon: Twitter,
-      label: 'X (Twitter)',
-      href: 'https://x.com/Ibrahimlaskar16',
-      color: 'hover:text-sky-400',
-      description: 'Follow on X'
+      icon: Instagram,
+      label: 'Instagram',
+      href: 'https://www.instagram.com/genzmediatown/',
+      color: 'hover:text-pink-500',
+      description: 'Follow on Instagram'
     },
   ], []);
 
   return (
-    <section id="get-in-touch" className="py-24 bg-black transition-colors duration-500">
+    <section id="get-in-touch" className="py-32 bg-black transition-colors duration-500 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-8">
         <motion.div
           ref={ref}
@@ -49,10 +42,10 @@ const GetInTouchSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6 transition-colors duration-500">
-            Get in Touch
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 transition-colors duration-500 text-glow tracking-tight">
+            Get in <span className="gradient-text-premium">Touch</span>
           </h2>
-          <p className="text-xl text-gray-400 font-sans max-w-2xl mx-auto transition-colors duration-500">
+          <p className="text-xl text-gray-300 font-sans max-w-2xl mx-auto transition-colors duration-500 tracking-premium leading-relaxed">
             Ready to collaborate? Let's connect and create something amazing together.
           </p>
         </motion.div>

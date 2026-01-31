@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Send, Linkedin, Mail, MessageCircle, Calendar } from 'lucide-react';
+import { Send, Mail, MessageCircle, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/neon-button';
 
 const ContactSection = () => {
@@ -37,15 +37,9 @@ const ContactSection = () => {
 
   const socialLinks = [
     { 
-      icon: Linkedin, 
-      label: 'LinkedIn', 
-      href: 'https://www.linkedin.com/in/ibrahim-laskar-ai/', 
-      color: 'hover:text-blue-500' 
-    },
-    { 
       icon: Calendar, 
       label: 'Book a 1:1 Call', 
-      href: 'https://calendly.com/neutromedia0/30min', 
+      href: 'https://calendly.com/genzmediatown/30min', 
       color: 'hover:text-green-500' 
     },
   ];
@@ -124,7 +118,7 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 bg-white/80 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl focus:outline-none focus:ring-2 focus:ring-pastel-purple dark:focus:ring-pastel-pink focus:border-transparent transition-all duration-200 font-sans text-deep-navy dark:text-white"
-                  placeholder="Neutro"
+                  placeholder="Your Name"
                 />
               </div>
 
@@ -141,7 +135,7 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 bg-white/80 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl focus:outline-none focus:ring-2 focus:ring-pastel-purple dark:focus:ring-pastel-pink focus:border-transparent transition-all duration-200 font-sans text-deep-navy dark:text-white"
-                  placeholder="neutromedia0@gmail.com"
+                  placeholder="genzmediatown@gmail.com"
                 />
               </div>
 

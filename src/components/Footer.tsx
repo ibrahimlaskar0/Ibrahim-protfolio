@@ -16,7 +16,7 @@ const Footer = () => {
     { label: 'About', id: 'testimonials', type: 'scroll' },
     { label: 'Motion Work', id: 'motion-work', type: 'scroll' },
     { label: 'SaaS Projects', id: 'saas-projects', type: 'scroll' },
-    { label: 'Contact', id: 'https://calendly.com/neutromedia0/30min', type: 'link' },
+    { label: 'Contact', id: 'https://calendly.com/genzmediatown/30min', type: 'link' },
   ];
 
   return (
@@ -53,7 +53,7 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex items-center text-sm text-gray-400 transition-colors duration-500"
             >
-              <span>© 2025 Ibrahim Laskar. Made with</span>
+              <span>© 2025 GenZ Media Town. Made with</span>
               <Heart className="w-4 h-4 mx-1 text-red-400" />
               <span>& lots of coffee</span>
             </motion.div>
