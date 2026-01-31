@@ -1,12 +1,7 @@
 import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
 import { Code, Palette, Zap, Sparkles, Layers, Monitor, Cpu, Brush, Rocket } from 'lucide-react';
 
 const SaasSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
   const wistiaVideos = [
     { mediaId: 'q0hlxh54xh', aspect: '0.5625' },
     { mediaId: 's2b939trsz', aspect: '0.5625' },
@@ -69,14 +64,14 @@ const SaasSection = () => {
           return (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0, rotate: -180 }}
-              animate={isInView ? { 
-                opacity: [0, 0.15, 0.08, 0.12, 0.06],
-                scale: [0, 1, 1.2, 0.9, 1.1, 1],
+              initial={{ opacity: 0.12, scale: 0.9, rotate: -40 }}
+              animate={{ 
+                opacity: [0.12, 0.22, 0.14, 0.2, 0.12],
+                scale: [0.9, 1.05, 1.2, 0.95, 1.08, 1],
                 y: [0, -25, 5, -15, 0],
                 x: [0, 10, -5, 8, 0],
-                rotate: [0, 15, -10, 5, 0]
-              } : {}}
+                rotate: [-40, 10, -12, 6, -8]
+              }}
               transition={{
                 duration: element.duration,
                 delay: element.delay,
@@ -97,13 +92,13 @@ const SaasSection = () => {
         {particles.map((particle) => (
           <motion.div
             key={particle.id}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={isInView ? {
-              opacity: [0, 0.3, 0.1, 0.2, 0],
-              scale: [0, 1, 0.8, 1.2, 0.6],
+            initial={{ opacity: 0.1, scale: 0.9 }}
+            animate={{
+              opacity: [0.1, 0.35, 0.18, 0.26, 0.12],
+              scale: [0.9, 1.05, 0.85, 1.2, 0.95],
               y: [0, -40, 10, -20, 0],
               x: [0, 15, -8, 12, 0],
-            } : {}}
+            }}
             transition={{
               duration: particle.duration,
               delay: particle.delay,
@@ -237,9 +232,9 @@ const SaasSection = () => {
 
       <div className="max-w-7xl mx-auto px-8 relative z-10">
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -265,7 +260,8 @@ const SaasSection = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -8, scale: 1.05 }}
                 className="group cursor-pointer relative"
@@ -299,7 +295,8 @@ const SaasSection = () => {
         {/* SaaS & UI/UX Section Copy 1 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16 mt-24"
         >
@@ -318,7 +315,8 @@ const SaasSection = () => {
               <motion.div
                 key={`copy1-${index}`}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -8, scale: 1.05 }}
                 className="group cursor-pointer relative"
@@ -350,7 +348,8 @@ const SaasSection = () => {
         {/* Avatar-Led AI Videos Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16 mt-24"
         >
@@ -369,7 +368,8 @@ const SaasSection = () => {
               <motion.div
                 key={`copy2-${index}`}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -8, scale: 1.05 }}
                 className="group cursor-pointer relative"
